@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>David – Certified Graphic Designer</title>
+
+  <!-- Favicon / Logo -->
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <!-- Animate.css -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" 
+  />
+
+  <!-- AOS Animations -->
+  <link 
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" 
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    rel="stylesheet"
+  />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- PayPal SDK (PayPal only Smart Buttons) -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&merchant-id=YOUR_MERCHANT_ID&currency=USD&components=buttons&disable-funding=credit,card,venmo,paylater"
+    defer
+  ></script>
+
+  <!-- AOS JS -->
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" 
+    defer
+  ></script>
+
+  <!-- Main Script -->
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- Back to top -->
+  <button id="backToTop" title="Back to top">↑</button>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar container">
+      <a href="#hero" class="logo">
+        <img src="logo.png" alt="David Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#paypal-area">Pay</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content" data-aos="zoom-in">
+        <h1 class="animate__animated animate__fadeInDown">Bring Your Ideas to Life</h1>
+        <p class="animate__animated animate__fadeInUp animate__delay-1s">
+          I’m David, a certified graphic designer. Let’s create something amazing together!
+        </p>
+        <a href="#services" class="btn animate__animated animate__pulse animate__infinite">
+          Explore Services
+        </a>
+      </div>
+    </section>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2 data-aos="fade-right">Design Services</h2>
+      <div class="cards">
+        <div class="card" data-aos="flip-left">
+          <i class="fas fa-pencil-ruler fa-2x"></i>
+          <h3>Logo Design</h3>
+          <p>Custom, memorable logos tailored to your brand identity.</p>
+        </div>
+        <div class="card" data-aos="flip-left" data-aos-delay="100">
+          <i class="fab fa-instagram fa-2x"></i>
+          <h3>Social Media</h3>
+          <p>Engaging graphics for all your social platforms.</p>
+        </div>
+        <div class="card" data-aos="flip-left" data-aos-delay="200">
+          <i class="fas fa-print fa-2x"></i>
+          <h3>Print Materials</h3>
+          <p>Professional flyers, brochures, business cards & more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section portfolio">
+    <div class="container">
+      <h2 data-aos="fade-left">Portfolio</h2>
+      <div class="gallery">
+        <img src="portfolio-1.jpg" alt="Portfolio Item 1" data-aos="zoom-in" data-aos-delay="100">
+        <img src="portfolio-2.png" alt="Portfolio Item 2" data-aos="zoom-in" data-aos-delay="200">
+        <img src="portfolio-3.png" alt="Portfolio Item 3" data-aos="zoom-in" data-aos-delay="300">
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section pricing">
+    <div class="container">
+      <h2 data-aos="fade-right">Pricing</h2>
+      <div class="pricing-cards">
+        <div class="pricing-card" data-aos="flip-up">
+          <h3>Basic</h3>
+          <p class="price">$20</p>
+          <ul>
+            <li>1 Logo Concept</li>
+            <li>2 Revisions</li>
+            <li>Email Support</li>
+          </ul>
+          <div class="pay-btn" data-amount="20.00"></div>
+        </div>
+        <div class="pricing-card" data-aos="flip-up" data-aos-delay="100">
+          <h3>Standard</h3>
+          <p class="price">$50</p>
+          <ul>
+            <li>3 Logo Concepts</li>
+            <li>5 Revisions</li>
+            <li>Priority Email Support</li>
+          </ul>
+          <div class="pay-btn" data-amount="50.00"></div>
+        </div>
+        <div class="pricing-card" data-aos="flip-up" data-aos-delay="200">
+          <h3>Premium</h3>
+          <p class="price">$100</p>
+          <ul>
+            <li>Unlimited Concepts</li>
+            <li>Unlimited Revisions</li>
+            <li>Dedicated Chat Support</li>
+          </ul>
+          <div class="pay-btn" data-amount="100.00"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEDICATED PAYPAL AREA -->
+  <section id="paypal-area" class="section paypal-area">
+    <div class="container">
+      <h2 data-aos="fade-right">Secure Checkout via PayPal</h2>
+      <div class="paypal-brand" data-aos="zoom-in">
+        <i class="fab fa-paypal fa-3x"></i>
+        <span>Fast & Secure Payment</span>
+      </div>
+      <div id="paypal-button-container" data-aos="fade-up"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT & CUSTOM ORDER -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 data-aos="fade-left">Place Your Custom Order</h2>
+      <form id="orderForm" data-aos="fade-up">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="name" placeholder="Your Full Name" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-comment-dots"></i>
+          <textarea name="details" rows="5" placeholder="Describe your request..." required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Request & Pay $20</button>
+      </form>
+      <div id="paypal-custom-container" data-aos="fade-up"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Contact me: <a href="mailto:davidsamaan23@gmail.com">davidsamaan23@gmail.com</a></p>
+      <p>© 2025 David – Certified Graphic Designer</p>
+    </div>
+  </footer>
+
+</body>
+</html>
