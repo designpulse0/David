@@ -1,0 +1,220 @@
+:root {
+  --primary:      #1E3A8A;
+  --accent:       #009CDE;
+  --bg-light:     #F5F7FA;
+  --text-dark:    #111827;
+  --white:        #FFFFFF;
+}
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Back to top */
+#backToTop {
+  display: none;
+  position: fixed; bottom: 30px; right: 30px;
+  background: var(--accent); color: var(--white);
+  border: none; padding: 10px 15px; border-radius: 50%;
+  cursor: pointer; font-size: 1.2rem; z-index: 1000;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 0; background: var(--white);
+  position: sticky; top: 0; z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.navbar .logo img {
+  height: 70px;
+}
+.nav-links {
+  list-style: none; display: flex; gap: 25px;
+}
+.nav-links a {
+  text-decoration: none; color: var(--text-dark);
+  font-weight: 500; transition: color .3s;
+}
+.nav-links a:hover {
+  color: var(--primary);
+}
+.mobile-toggle {
+  display: none; font-size: 1.5rem; cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  background: url('') center/cover no-repeat;
+  height: 80vh; display: flex; align-items: center;
+}
+.hero-overlay {
+  position: absolute; top:0; left:0; right:0; bottom:0;
+  background: rgba(30,58,138,0.7);
+}
+.hero-content {
+  position: relative; text-align: center; width: 100%;
+}
+.hero-content h1 {
+  font-size: 3.5rem; color: var(--white); margin-bottom: 15px;
+}
+.hero-content p {
+  font-size: 1.2rem; color: var(--white); margin-bottom: 20px;
+}
+.btn {
+  background: var(--accent); color: var(--white);
+  padding: 14px 30px; border: none; border-radius: 50px;
+  text-decoration: none; font-weight: 600;
+  transition: background .3s;
+}
+.btn:hover {
+  background: #0070BA;
+}
+
+/* SECTION HEADINGS */
+.section {
+  padding: 80px 0;
+  text-align: center;
+}
+.section h2 {
+  font-size: 2.8rem; color: var(--primary); margin-bottom: 30px;
+}
+
+/* CARDS */
+.cards {
+  display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
+}
+.card {
+  background: var(--white); padding: 30px; width: 280px;
+  border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform .3s;
+  text-align: center;
+}
+.card i {
+  font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;
+}
+.card h3 {
+  margin-bottom: 10px; font-size: 1.5rem;
+}
+.card p {
+  font-size: 1rem; color: #555;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* GALLERY */
+.gallery {
+  display: grid; gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+.gallery img {
+  width: 100%; border-radius: 8px;
+  transition: transform .3s;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* PRICING */
+.pricing-cards {
+  display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
+}
+.pricing-card {
+  background: var(--white); padding: 30px; width: 260px;
+  border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center; transition: transform .3s;
+}
+.pricing-card:hover {
+  transform: translateY(-8px);
+}
+.pricing-card h3 {
+  color: var(--primary); margin-bottom: 10px; font-size: 1.4rem;
+}
+.pricing-card .price {
+  font-size: 2rem; margin-bottom: 15px; font-weight: bold;
+}
+.pricing-card ul {
+  list-style: none; margin-bottom: 20px;
+}
+.pricing-card ul li {
+  margin-bottom: 8px; color: #555;
+}
+
+/* DEDICATED PAYPAL AREA */
+.paypal-area {
+  background: var(--white); padding: 60px 20px;
+  border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin: 40px 0;
+}
+.paypal-brand {
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px; color: var(--primary); margin-bottom: 25px;
+}
+.paypal-brand span {
+  font-size: 1.2rem; font-weight: 500;
+}
+
+/* CONTACT FORM */
+.contact form {
+  max-width: 600px; margin: 0 auto; text-align: left;
+  background: var(--white); padding: 30px; border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.input-group {
+  position: relative; margin-bottom: 20px;
+}
+.input-group i {
+  position: absolute; top: 50%; left: 15px;
+  transform: translateY(-50%); color: var(--accent);
+  font-size: 1.2rem;
+}
+.contact input,
+.contact textarea {
+  width: 100%; padding: 12px 15px 12px 45px;
+  border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;
+}
+.contact textarea {
+  resize: vertical;
+}
+.contact button {
+  display: block; width: 100%; text-align: center;
+  background: var(--accent); color: var(--white);
+  padding: 14px; border: none; border-radius: 8px;
+  font-size: 1rem; font-weight: 600; cursor: pointer;
+  transition: background .3s;
+}
+.contact button:hover {
+  background: #0070BA;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--white); padding: 30px 0;
+  text-align: center; font-size: 0.9rem; color: #666;
+}
+.footer a {
+  color: var(--primary); text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links { display: none; position: absolute; top: 70px; left: 0; right: 0;
+    background: var(--white); flex-direction: column; padding: 20px;
+  }
+  .nav-links.show { display: flex; }
+  .mobile-toggle { display: block; }
+  .hero-content h1 { font-size: 2.5rem; }
+}
